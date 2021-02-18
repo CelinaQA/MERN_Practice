@@ -71,7 +71,7 @@ router.patch("/update/:id", (req, res, next) => {
 //replace a document
 router.put("/replace/:id", (req, res, next) => {
     const id = req.params.id;
-    const { name, price, onSale } = req.query;
+    const { description, isDone } = req.query;
     Task.findByIdAndUpdate(id, { description, isDone }, { new: true }, (err, result) => {
         if (err) {
             console.log(err);
