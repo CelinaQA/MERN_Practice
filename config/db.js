@@ -15,7 +15,7 @@ mongoose.connect(`mongodb://${DB_URL}/${DB_NAME}`, { useNewUrlParser: true, useU
     if (err) {
         console.log(err);
     } else {
-        console.log(`connected`);
+        console.log(`Connected successfully`);
     }
 })
 

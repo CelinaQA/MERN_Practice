@@ -2,8 +2,6 @@
 const router = require("express").Router();
 const { Task } = require("../config/db");
 
-let products = ["sugar", "butter", "flour"];
-
 // requests (CRUD)
 router.get("/getAll", (req, res, next) => {
     Task.find((err, result) => {
@@ -33,7 +31,6 @@ router.post("/create", (req, res, next) => {
     console.log(task);
     task.save()
         .then((result) => {
-            console.log(result)
             res.status(201).send(`Task has beed added successfully!`)
         })
         .catch((err) => {
