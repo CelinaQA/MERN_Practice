@@ -11,9 +11,9 @@ app.use(express.json()); // body parser - must come before route
 
 // Requests
 
-const productRoute = require("./routes/products");
+const taskRoute = require("./routes/tasks");
 
-app.use("/product", productRoute);
+app.use("/task", taskRoute);
 
 // error handling
 app.use((req, res, next) => {
